@@ -1,0 +1,22 @@
+{
+  "name": "fullstack-practice-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cheekypints/mongodb-connector": "^1.0.3",
+    "@cheekypints/rest-ts": "^1.0.6",
+    "fluent-schema": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.5.28",
+    "@types/node": "^14.11.10",
+    "typescript": "^4.0.3"
+  }
+}
