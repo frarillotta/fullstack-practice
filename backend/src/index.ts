@@ -1,3 +1,14 @@
 import { Controller } from "./Controller/Controller";
 
-new Controller().start();
+export class Backend {
+
+    start() {
+
+        const controller = new Controller;
+        controller.start();
+
+    }
+
+}
+
+new Backend().start();
