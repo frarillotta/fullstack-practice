@@ -1,31 +1,27 @@
-import axios from "axios"
+import axios from "axios";
+const baseUrl = "http://0.0.0.0:8080/";
 
 export class OMDBApi {
 
-    private baseUrl: string;
+    static searchFilm(title) {
 
-    constructor() {
+        const query = "search/";
 
-        this.baseUrl = "http://0.0.0.0:8080/"
+        const requestURL = baseUrl + query + title;
 
-    }
+        return axios.get(requestURL).then((response)=> {
 
+            return response.data
 
-    searchFilm(title) {
-
-        const query = "search/"
-
-        const requestURL = query + title
-
-        axios.get(requestURL)
+        })
 
     }
 
-    queryFilm(id) {
+    static queryFilm(id) {
 
         const query = "film/"
 
-        const requestURL = query + id
+        const requestURL = baseUrl + query + id
 
         axios.get(requestURL)
 

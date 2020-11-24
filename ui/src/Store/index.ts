@@ -1,9 +1,13 @@
-import {createBrowserHistory, History} from "history";
-import {createStore} from "redux";
-import rootReducer from "./Reducers";
+import {combineReducers, configureStore} from "@reduxjs/toolkit";
+import rootReducer from "./Reducers/index";
+import rootSaga from "./Sagas";
+import initiliazeSagaMiddleware from "redux-saga";
 
-export const history: History = createBrowserHistory();
+const sagaMiddleware = initiliazeSagaMiddleware();
 
-export const store = createStore(
-    rootReducer(history),
-);
+export const store = configureStore({
+    reducer: rootReducer(),
+    middleware: [sagaMiddleware]
+});
+
+sagaMiddleware.run(rootSaga);

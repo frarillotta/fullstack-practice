@@ -1,17 +1,10 @@
 import {combineReducers} from "redux";
-import { History } from "history";
-import {RouterState, connectRouter} from "connected-react-router";
-import Search, {SearchState} from "./Search/Search"
+import List from "./List/List";
 
-const rootReducer = (history: History) => combineReducers({
-    router: connectRouter(history),
-    search: Search
-});
+const rootReducer = () => combineReducers({
 
-export interface State {
-    router?: RouterState;
-    search: SearchState
+    list: List
 
-}
+})
 
 export default rootReducer;

@@ -1,17 +1,17 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 import {Provider} from "react-redux";
-import {store, history} from "./Store";
-import {App} from "./Views/App/App";
-import {CssBaseline, MuiThemeProvider} from "@material-ui/core";
-import {ConnectedRouter} from "connected-react-router";
+import {store} from "./Store"
+import App from "./View/App/App";
+
 
 ReactDOM.render(
+
     <Provider store={store}>
-        <CssBaseline/>
-            <ConnectedRouter history={history}>
-                <App/>
-            </ConnectedRouter>
+
+        <App></App>
+
     </Provider>,
     document.getElementById("root")
+
 );
