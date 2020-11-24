@@ -19,11 +19,15 @@ export class OMDBApi {
 
     static queryFilm(id) {
 
-        const query = "film/"
+        const query = "film/";
 
-        const requestURL = baseUrl + query + id
+        const requestURL = baseUrl + query + id;
 
-        axios.get(requestURL)
+        return axios.get(requestURL).then((response)=> {
+
+            return response.data
+
+        })
 
     }
 

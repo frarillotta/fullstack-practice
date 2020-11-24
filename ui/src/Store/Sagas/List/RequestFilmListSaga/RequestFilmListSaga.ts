@@ -4,7 +4,6 @@ import {filmListRequested} from "../../../Actions/FilmListRequested/FilmListRequ
 import {filmListReceived} from "../../../Actions/FilmListReceived/FilmListReceived";
 
 export function* watchRequestFilmList() {
-    console.log(filmListRequested.type)
     yield takeEvery(filmListRequested.type, requestFilmListSaga);
 }
 
